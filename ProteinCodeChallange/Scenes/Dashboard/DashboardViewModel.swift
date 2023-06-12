@@ -27,7 +27,6 @@ class DashboardViewModel: BaseViewModel<DashboardRouter> {
                 self?.onError?(error)
             } else {
                 DispatchQueue.main.async {
-                    // Fetch from realm again after new users have been saved
                     self?.users = try? Realm().objects(UserObject.self)
                     self?.dataUpdated?()
                 }
@@ -38,5 +37,11 @@ class DashboardViewModel: BaseViewModel<DashboardRouter> {
     func user(for index: Int) -> UserObject? {
         guard let users = users, users.indices.contains(index) else { return nil }
         return users[index]
+    }
+    
+    func pushUserDetail(indexPath: IndexPath) {
+        let userObject = user(for: indexPath.row)
+        guard let userObject = userObject else { return }
+        router.pushUserDetail(user: userObject)
     }
 }

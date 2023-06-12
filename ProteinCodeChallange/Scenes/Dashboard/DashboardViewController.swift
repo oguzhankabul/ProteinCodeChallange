@@ -77,7 +77,9 @@ class DashboardViewController: BaseViewController<DashboardViewModel> {
 }
 
 extension DashboardViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.pushUserDetail(indexPath: indexPath)
+    }
 }
 
 extension DashboardViewController: UITableViewDataSource {

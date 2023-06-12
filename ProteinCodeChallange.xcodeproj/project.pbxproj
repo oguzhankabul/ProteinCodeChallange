@@ -36,6 +36,13 @@
 		84CD67232A37C0C500E2351C /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD67222A37C0C500E2351C /* UserCell.swift */; };
 		84CD67252A37C3C500E2351C /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD67242A37C3C500E2351C /* UIImageView+Extension.swift */; };
 		84CD67282A37CE1300E2351C /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD67272A37CE1300E2351C /* NetworkMonitor.swift */; };
+		84CD672C2A37D18C00E2351C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD672B2A37D18C00E2351C /* Constants.swift */; };
+		84CD67302A37D49D00E2351C /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD672F2A37D49D00E2351C /* UserDetailViewModel.swift */; };
+		84CD67322A37D4A900E2351C /* UserDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD67312A37D4A900E2351C /* UserDetailRouter.swift */; };
+		84CD67342A37D4DB00E2351C /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD67332A37D4DB00E2351C /* UserDetailViewController.swift */; };
+		84CD67362A37D5ED00E2351C /* UserDetailRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD67352A37D5ED00E2351C /* UserDetailRoute.swift */; };
+		84CD67382A37DC2800E2351C /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD67372A37DC2800E2351C /* Int+Extension.swift */; };
+		84CD673A2A37E31200E2351C /* GeolocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD67392A37E31200E2351C /* GeolocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +93,13 @@
 		84CD67222A37C0C500E2351C /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		84CD67242A37C3C500E2351C /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		84CD67272A37CE1300E2351C /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		84CD672B2A37D18C00E2351C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		84CD672F2A37D49D00E2351C /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
+		84CD67312A37D4A900E2351C /* UserDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailRouter.swift; sourceTree = "<group>"; };
+		84CD67332A37D4DB00E2351C /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		84CD67352A37D5ED00E2351C /* UserDetailRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailRoute.swift; sourceTree = "<group>"; };
+		84CD67372A37DC2800E2351C /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		84CD67392A37E31200E2351C /* GeolocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeolocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +193,7 @@
 		84CD66EC2A37AB7000E2351C /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				84CD67292A37D16700E2351C /* Costants */,
 				84CD67262A37CE0300E2351C /* NetworkMonitor */,
 				84CD671A2A37BD3B00E2351C /* Extensions */,
 				84CD66F72A37AC6700E2351C /* Routing */,
@@ -211,6 +226,7 @@
 			children = (
 				84CD66F82A37AC8100E2351C /* AppRoute.swift */,
 				84CD67082A37B2FF00E2351C /* DashboardRoute.swift */,
+				84CD67352A37D5ED00E2351C /* UserDetailRoute.swift */,
 			);
 			path = Routing;
 			sourceTree = "<group>";
@@ -218,6 +234,7 @@
 		84CD66FA2A37ACB600E2351C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				84CD672E2A37D48F00E2351C /* UserDetail */,
 				84CD67012A37B28D00E2351C /* Dashboard */,
 				84CD66FB2A37ACBF00E2351C /* Login */,
 			);
@@ -247,9 +264,9 @@
 		84CD670A2A37B61700E2351C /* DataProvider */ = {
 			isa = PBXGroup;
 			children = (
+				84CD672D2A37D1E700E2351C /* Managers */,
 				84CD67172A37BCD800E2351C /* RealmObjects */,
 				84CD67162A37BCC700E2351C /* Models */,
-				84CD670B2A37B66A00E2351C /* UserManager.swift */,
 			);
 			path = DataProvider;
 			sourceTree = "<group>";
@@ -276,6 +293,7 @@
 			children = (
 				84CD671B2A37BD4B00E2351C /* User+Extension.swift */,
 				84CD67242A37C3C500E2351C /* UIImageView+Extension.swift */,
+				84CD67372A37DC2800E2351C /* Int+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -302,6 +320,33 @@
 				84CD67272A37CE1300E2351C /* NetworkMonitor.swift */,
 			);
 			path = NetworkMonitor;
+			sourceTree = "<group>";
+		};
+		84CD67292A37D16700E2351C /* Costants */ = {
+			isa = PBXGroup;
+			children = (
+				84CD672B2A37D18C00E2351C /* Constants.swift */,
+			);
+			path = Costants;
+			sourceTree = "<group>";
+		};
+		84CD672D2A37D1E700E2351C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				84CD670B2A37B66A00E2351C /* UserManager.swift */,
+				84CD67392A37E31200E2351C /* GeolocationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		84CD672E2A37D48F00E2351C /* UserDetail */ = {
+			isa = PBXGroup;
+			children = (
+				84CD67332A37D4DB00E2351C /* UserDetailViewController.swift */,
+				84CD672F2A37D49D00E2351C /* UserDetailViewModel.swift */,
+				84CD67312A37D4A900E2351C /* UserDetailRouter.swift */,
+			);
+			path = UserDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -444,7 +489,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				84CD67092A37B2FF00E2351C /* DashboardRoute.swift in Sources */,
+				84CD672C2A37D18C00E2351C /* Constants.swift in Sources */,
+				84CD67302A37D49D00E2351C /* UserDetailViewModel.swift in Sources */,
 				84CD66F62A37AC1000E2351C /* Transition.swift in Sources */,
+				84CD67322A37D4A900E2351C /* UserDetailRouter.swift in Sources */,
 				84CD670C2A37B66A00E2351C /* UserManager.swift in Sources */,
 				84CD67072A37B2B900E2351C /* DashboardRouter.swift in Sources */,
 				84CD671C2A37BD4B00E2351C /* User+Extension.swift in Sources */,
@@ -452,6 +500,7 @@
 				84CD67232A37C0C500E2351C /* UserCell.swift in Sources */,
 				84CD66F12A37ABB200E2351C /* BaseViewModel.swift in Sources */,
 				84CD66F32A37ABCB00E2351C /* BaseRouter.swift in Sources */,
+				84CD67382A37DC2800E2351C /* Int+Extension.swift in Sources */,
 				84CD67052A37B2AB00E2351C /* DashboardViewModel.swift in Sources */,
 				84CD67252A37C3C500E2351C /* UIImageView+Extension.swift in Sources */,
 				84CD67152A37B8F900E2351C /* UserAPIResponse.swift in Sources */,
@@ -461,7 +510,10 @@
 				84CD67192A37BCF100E2351C /* UserObject.swift in Sources */,
 				84CD66BC2A37A62200E2351C /* AppDelegate.swift in Sources */,
 				84CD66FE2A37ACDE00E2351C /* LoginRouter.swift in Sources */,
+				84CD673A2A37E31200E2351C /* GeolocationManager.swift in Sources */,
+				84CD67342A37D4DB00E2351C /* UserDetailViewController.swift in Sources */,
 				84CD67032A37B2A000E2351C /* DashboardViewController.swift in Sources */,
+				84CD67362A37D5ED00E2351C /* UserDetailRoute.swift in Sources */,
 				84CD66EF2A37AB8800E2351C /* BaseViewController.swift in Sources */,
 				84CD67002A37ACED00E2351C /* LoginViewModel.swift in Sources */,
 			);

@@ -27,6 +27,7 @@ class LoginViewController: BaseViewController<LoginViewModel> {
     override func viewDidLoad() {
         super.viewDidLoad()
         addTargetToButtons()
+        self.navigationItem.hidesBackButton = true
     }
     
     override func setupViews() {

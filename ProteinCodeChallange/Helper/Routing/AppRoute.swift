@@ -21,7 +21,6 @@ final class AppRouter {
         let vc = LoginViewController(viewModel: vm)
         router.viewController = vc
         let navigationController = UINavigationController(rootViewController: vc)
-        navigationController.navigationBar.prefersLargeTitles = true
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
     }

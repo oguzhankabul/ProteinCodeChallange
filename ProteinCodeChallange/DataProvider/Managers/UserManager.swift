@@ -11,7 +11,7 @@ import RealmSwift
 class UserManager {
     
     func fetchUsers(completion: @escaping (Error?) -> Void) {
-        let urlString = "https://randomuser.me/api/?results=20"
+        let urlString = Constants.baseUserUrl
         let url = URL(string: urlString)!
         
         let isConnected = NetworkMonitor.shared.isConnected
