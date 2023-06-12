@@ -29,6 +29,13 @@
 		84CD670E2A37B67100E2351C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD670D2A37B67100E2351C /* User.swift */; };
 		84CD67112A37B82300E2351C /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 84CD67102A37B82300E2351C /* Realm */; };
 		84CD67132A37B82300E2351C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 84CD67122A37B82300E2351C /* RealmSwift */; };
+		84CD67152A37B8F900E2351C /* UserAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD67142A37B8F900E2351C /* UserAPIResponse.swift */; };
+		84CD67192A37BCF100E2351C /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD67182A37BCF100E2351C /* UserObject.swift */; };
+		84CD671C2A37BD4B00E2351C /* User+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD671B2A37BD4B00E2351C /* User+Extension.swift */; };
+		84CD671F2A37C06900E2351C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 84CD671E2A37C06900E2351C /* Kingfisher */; };
+		84CD67232A37C0C500E2351C /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD67222A37C0C500E2351C /* UserCell.swift */; };
+		84CD67252A37C3C500E2351C /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD67242A37C3C500E2351C /* UIImageView+Extension.swift */; };
+		84CD67282A37CE1300E2351C /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD67272A37CE1300E2351C /* NetworkMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +80,12 @@
 		84CD67082A37B2FF00E2351C /* DashboardRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRoute.swift; sourceTree = "<group>"; };
 		84CD670B2A37B66A00E2351C /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		84CD670D2A37B67100E2351C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		84CD67142A37B8F900E2351C /* UserAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIResponse.swift; sourceTree = "<group>"; };
+		84CD67182A37BCF100E2351C /* UserObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserObject.swift; sourceTree = "<group>"; };
+		84CD671B2A37BD4B00E2351C /* User+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Extension.swift"; sourceTree = "<group>"; };
+		84CD67222A37C0C500E2351C /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		84CD67242A37C3C500E2351C /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		84CD67272A37CE1300E2351C /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84CD671F2A37C06900E2351C /* Kingfisher in Frameworks */,
 				84CD67132A37B82300E2351C /* RealmSwift in Frameworks */,
 				84CD67112A37B82300E2351C /* Realm in Frameworks */,
 			);
@@ -125,6 +139,7 @@
 		84CD66BA2A37A62200E2351C /* ProteinCodeChallange */ = {
 			isa = PBXGroup;
 			children = (
+				84CD67202A37C0A300E2351C /* CustomViews */,
 				84CD670A2A37B61700E2351C /* DataProvider */,
 				84CD66FA2A37ACB600E2351C /* Scenes */,
 				84CD66EC2A37AB7000E2351C /* Helper */,
@@ -164,6 +179,8 @@
 		84CD66EC2A37AB7000E2351C /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				84CD67262A37CE0300E2351C /* NetworkMonitor */,
+				84CD671A2A37BD3B00E2351C /* Extensions */,
 				84CD66F72A37AC6700E2351C /* Routing */,
 				84CD66F42A37AC0000E2351C /* TransitionHelper */,
 				84CD66ED2A37AB7700E2351C /* Bases */,
@@ -230,10 +247,61 @@
 		84CD670A2A37B61700E2351C /* DataProvider */ = {
 			isa = PBXGroup;
 			children = (
+				84CD67172A37BCD800E2351C /* RealmObjects */,
+				84CD67162A37BCC700E2351C /* Models */,
 				84CD670B2A37B66A00E2351C /* UserManager.swift */,
-				84CD670D2A37B67100E2351C /* User.swift */,
 			);
 			path = DataProvider;
+			sourceTree = "<group>";
+		};
+		84CD67162A37BCC700E2351C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84CD67142A37B8F900E2351C /* UserAPIResponse.swift */,
+				84CD670D2A37B67100E2351C /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		84CD67172A37BCD800E2351C /* RealmObjects */ = {
+			isa = PBXGroup;
+			children = (
+				84CD67182A37BCF100E2351C /* UserObject.swift */,
+			);
+			path = RealmObjects;
+			sourceTree = "<group>";
+		};
+		84CD671A2A37BD3B00E2351C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				84CD671B2A37BD4B00E2351C /* User+Extension.swift */,
+				84CD67242A37C3C500E2351C /* UIImageView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		84CD67202A37C0A300E2351C /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				84CD67212A37C0B200E2351C /* Cells */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		84CD67212A37C0B200E2351C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				84CD67222A37C0C500E2351C /* UserCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		84CD67262A37CE0300E2351C /* NetworkMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				84CD67272A37CE1300E2351C /* NetworkMonitor.swift */,
+			);
+			path = NetworkMonitor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +323,7 @@
 			packageProductDependencies = (
 				84CD67102A37B82300E2351C /* Realm */,
 				84CD67122A37B82300E2351C /* RealmSwift */,
+				84CD671E2A37C06900E2351C /* Kingfisher */,
 			);
 			productName = ProteinCodeChallange;
 			productReference = 84CD66B82A37A62200E2351C /* ProteinCodeChallange.app */;
@@ -330,6 +399,7 @@
 			mainGroup = 84CD66AF2A37A62200E2351C;
 			packageReferences = (
 				84CD670F2A37B82200E2351C /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				84CD671D2A37C06900E2351C /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 84CD66B92A37A62200E2351C /* Products */;
 			projectDirPath = "";
@@ -377,12 +447,18 @@
 				84CD66F62A37AC1000E2351C /* Transition.swift in Sources */,
 				84CD670C2A37B66A00E2351C /* UserManager.swift in Sources */,
 				84CD67072A37B2B900E2351C /* DashboardRouter.swift in Sources */,
+				84CD671C2A37BD4B00E2351C /* User+Extension.swift in Sources */,
 				84CD66C02A37A62200E2351C /* LoginViewController.swift in Sources */,
+				84CD67232A37C0C500E2351C /* UserCell.swift in Sources */,
 				84CD66F12A37ABB200E2351C /* BaseViewModel.swift in Sources */,
 				84CD66F32A37ABCB00E2351C /* BaseRouter.swift in Sources */,
 				84CD67052A37B2AB00E2351C /* DashboardViewModel.swift in Sources */,
+				84CD67252A37C3C500E2351C /* UIImageView+Extension.swift in Sources */,
+				84CD67152A37B8F900E2351C /* UserAPIResponse.swift in Sources */,
 				84CD670E2A37B67100E2351C /* User.swift in Sources */,
+				84CD67282A37CE1300E2351C /* NetworkMonitor.swift in Sources */,
 				84CD66F92A37AC8100E2351C /* AppRoute.swift in Sources */,
+				84CD67192A37BCF100E2351C /* UserObject.swift in Sources */,
 				84CD66BC2A37A62200E2351C /* AppDelegate.swift in Sources */,
 				84CD66FE2A37ACDE00E2351C /* LoginRouter.swift in Sources */,
 				84CD67032A37B2A000E2351C /* DashboardViewController.swift in Sources */,
@@ -729,6 +805,14 @@
 				kind = branch;
 			};
 		};
+		84CD671D2A37C06900E2351C /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -741,6 +825,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 84CD670F2A37B82200E2351C /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = RealmSwift;
+		};
+		84CD671E2A37C06900E2351C /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84CD671D2A37C06900E2351C /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
