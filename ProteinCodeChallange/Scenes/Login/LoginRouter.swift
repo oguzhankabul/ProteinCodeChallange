@@ -7,6 +7,7 @@
 
 import Foundation
 
-final class LoginRouter: Router {
+final class LoginRouter: Router, LoginRouter.Routes {
     
+    typealias Routes = DashboardRoute
 }

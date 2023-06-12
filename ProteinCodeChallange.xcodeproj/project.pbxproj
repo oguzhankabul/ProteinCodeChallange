@@ -21,6 +21,12 @@
 		84CD66F92A37AC8100E2351C /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD66F82A37AC8100E2351C /* AppRoute.swift */; };
 		84CD66FE2A37ACDE00E2351C /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD66FD2A37ACDE00E2351C /* LoginRouter.swift */; };
 		84CD67002A37ACED00E2351C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD66FF2A37ACED00E2351C /* LoginViewModel.swift */; };
+		84CD67032A37B2A000E2351C /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD67022A37B2A000E2351C /* DashboardViewController.swift */; };
+		84CD67052A37B2AB00E2351C /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD67042A37B2AB00E2351C /* DashboardViewModel.swift */; };
+		84CD67072A37B2B900E2351C /* DashboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD67062A37B2B900E2351C /* DashboardRouter.swift */; };
+		84CD67092A37B2FF00E2351C /* DashboardRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD67082A37B2FF00E2351C /* DashboardRoute.swift */; };
+		84CD670C2A37B66A00E2351C /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD670B2A37B66A00E2351C /* UserManager.swift */; };
+		84CD670E2A37B67100E2351C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD670D2A37B67100E2351C /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +65,12 @@
 		84CD66F82A37AC8100E2351C /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
 		84CD66FD2A37ACDE00E2351C /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		84CD66FF2A37ACED00E2351C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		84CD67022A37B2A000E2351C /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		84CD67042A37B2AB00E2351C /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		84CD67062A37B2B900E2351C /* DashboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRouter.swift; sourceTree = "<group>"; };
+		84CD67082A37B2FF00E2351C /* DashboardRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRoute.swift; sourceTree = "<group>"; };
+		84CD670B2A37B66A00E2351C /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		84CD670D2A37B67100E2351C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +121,7 @@
 		84CD66BA2A37A62200E2351C /* ProteinCodeChallange */ = {
 			isa = PBXGroup;
 			children = (
+				84CD670A2A37B61700E2351C /* DataProvider */,
 				84CD66FA2A37ACB600E2351C /* Scenes */,
 				84CD66EC2A37AB7000E2351C /* Helper */,
 				84CD66EB2A37AB2800E2351C /* AppDelegate */,
@@ -176,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				84CD66F82A37AC8100E2351C /* AppRoute.swift */,
+				84CD67082A37B2FF00E2351C /* DashboardRoute.swift */,
 			);
 			path = Routing;
 			sourceTree = "<group>";
@@ -183,6 +197,7 @@
 		84CD66FA2A37ACB600E2351C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				84CD67012A37B28D00E2351C /* Dashboard */,
 				84CD66FB2A37ACBF00E2351C /* Login */,
 			);
 			path = Scenes;
@@ -196,6 +211,25 @@
 				84CD66FD2A37ACDE00E2351C /* LoginRouter.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		84CD67012A37B28D00E2351C /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				84CD67022A37B2A000E2351C /* DashboardViewController.swift */,
+				84CD67042A37B2AB00E2351C /* DashboardViewModel.swift */,
+				84CD67062A37B2B900E2351C /* DashboardRouter.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		84CD670A2A37B61700E2351C /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				84CD670B2A37B66A00E2351C /* UserManager.swift */,
+				84CD670D2A37B67100E2351C /* User.swift */,
+			);
+			path = DataProvider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,13 +362,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84CD67092A37B2FF00E2351C /* DashboardRoute.swift in Sources */,
 				84CD66F62A37AC1000E2351C /* Transition.swift in Sources */,
+				84CD670C2A37B66A00E2351C /* UserManager.swift in Sources */,
+				84CD67072A37B2B900E2351C /* DashboardRouter.swift in Sources */,
 				84CD66C02A37A62200E2351C /* LoginViewController.swift in Sources */,
 				84CD66F12A37ABB200E2351C /* BaseViewModel.swift in Sources */,
 				84CD66F32A37ABCB00E2351C /* BaseRouter.swift in Sources */,
+				84CD67052A37B2AB00E2351C /* DashboardViewModel.swift in Sources */,
+				84CD670E2A37B67100E2351C /* User.swift in Sources */,
 				84CD66F92A37AC8100E2351C /* AppRoute.swift in Sources */,
 				84CD66BC2A37A62200E2351C /* AppDelegate.swift in Sources */,
 				84CD66FE2A37ACDE00E2351C /* LoginRouter.swift in Sources */,
+				84CD67032A37B2A000E2351C /* DashboardViewController.swift in Sources */,
 				84CD66EF2A37AB8800E2351C /* BaseViewController.swift in Sources */,
 				84CD67002A37ACED00E2351C /* LoginViewModel.swift in Sources */,
 			);
